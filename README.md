@@ -16,4 +16,6 @@ Java (Spring Boot) based Notification Service with multiple channel support
 3. Maven
 4. Open Api (Swagger)
 
-### FCM 
+### APIs
+1. /notify
+2. 

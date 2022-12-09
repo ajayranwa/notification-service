@@ -1,16 +1,13 @@
 package com.ajay.notificationservice.interceptor;
 
-import jakarta.servlet.http.HttpServletRequest;
-import jakarta.servlet.http.HttpServletResponse;
 import org.slf4j.MDC;
 import org.springframework.stereotype.Component;
 import org.springframework.web.servlet.HandlerInterceptor;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import java.util.UUID;
 
-/**
- * @author amit.kumar
- */
 @Component
 public class RequestInterceptor implements HandlerInterceptor {
 
