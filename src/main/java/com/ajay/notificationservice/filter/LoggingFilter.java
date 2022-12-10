@@ -25,7 +25,7 @@ import java.util.Map;
  */
 @Component
 public class LoggingFilter extends OncePerRequestFilter implements Ordered {
-    private static final Logger LOGGER = LoggerUtil.getLogger(LoggingFilter.class);
+    private static final Logger logger = LoggerUtil.getLogger(LoggingFilter.class);
 
     @Override
     public int getOrder() {
@@ -40,7 +40,7 @@ public class LoggingFilter extends OncePerRequestFilter implements Ordered {
         ContentCachingResponseWrapper wrapperResponse = new ContentCachingResponseWrapper(response);
         filterChain.doFilter(wrappedRequest, wrapperResponse);
         long timeConsumed = System.currentTimeMillis() - reqStartTime;
-        LOGGER.info("""
+        logger.info("""
                         \n==========================
                          Request Details:{}\s
                          Response Details:{}\s

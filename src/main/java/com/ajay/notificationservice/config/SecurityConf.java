@@ -10,12 +10,11 @@ public class SecurityConf {
 
     @Bean
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
-//        http.headers()
-//                .xssProtection()
-//                .and()
-//                .contentSecurityPolicy("script-src 'self'");
-        http.csrf().disable();
-        http.headers().frameOptions().disable();
+        http.headers()
+                .xssProtection()
+                .and()
+                .contentSecurityPolicy("script-src 'self'");
+        http.cors().and().csrf().disable();
         return http.build();
     }
 }
